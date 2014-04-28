@@ -8,7 +8,7 @@
 ## 3. set the value of the inverse
 ## 4. get the value of the inverse
 
-makeMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) {
 	xInv <- NULL
 	set <- function(y) {
 		x <<- y
@@ -31,7 +31,6 @@ makeMatrix <- function(x = matrix()) {
 ## inverse in the cache.
 
 cacheSolve <- function(x, ...) {
-	x
 	xInv <- x$getInv()
 	if (!is.null(xInv)) {
 		message("getting cached data")
